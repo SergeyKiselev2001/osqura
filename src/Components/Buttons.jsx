@@ -5,12 +5,15 @@ import classes from './../Styles/App/buttons.module.css';
 const Buttons = props => {
 
     const entry1Click = () => {
+        props.toggleResult(false);
         props.toggleForm1();
     }
     const entry2Click = () => {
+        props.toggleResult(false);
         props.toggleForm2();
     }
     const registrationClick = () => {
+        props.toggleResult(false);
         props.toggleForm3();
     }   
 

@@ -1,4 +1,5 @@
 import { toggleForm1, toggleForm2, toggleForm3 } from './../redux/appReduser';
+import { toggleResult } from './../redux/appReduser';
 
 
 import { connect } from "react-redux";
@@ -23,7 +24,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = {
     toggleForm1,
     toggleForm2,
-    toggleForm3
+    toggleForm3,
+
+    toggleResult,
 }
 
 

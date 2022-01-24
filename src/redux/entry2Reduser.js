@@ -1,9 +1,8 @@
 import { API_1 } from "../APIs/API_1";
+import { setResultMessage, toggleForm2, toggleForm3, toggleResult } from "./appReduser";
 //import { toggleForm1, toggleForm2 } from "./appReduser";
 
 let initialState = {
-    email: '',
-    password: '',
     isPending : false,
     errorMessage : '',
 };
@@ -34,10 +33,18 @@ export const AuthorizationThunkCreator = (email, password) => async (dispatch) =
 
     try {
         const result = await API_1.authorization(email, password);
+
+        dispatch(toggleResult(true));
+
+        dispatch(setResultMessage('Успешная авторизация!'));
+        debugger;
+        dispatch(toggleForm2());
     } catch (e) {
+        debugger;
         dispatch(setErrorMessageEntry2('Неверный логин/пароль'));
     } finally {
         dispatch(tooglePendingEntry2());
+        //dispatch(toggleResult());
     }
 }
 

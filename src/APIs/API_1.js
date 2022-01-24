@@ -45,6 +45,13 @@ export const API_1 = {
             email,
             password
         })
+    },
+
+    addUser(name, phone, email, password){
+
+        return axiosInstance.post('register', {
+            name, phone, email, password
+        })
     }
 
 }
