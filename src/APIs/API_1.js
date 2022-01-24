@@ -30,35 +30,6 @@ const axiosInstance = axios.create({
 
 
 
-// let body = {
-//     "email": "iqvuyxuhdigbkmmvxshpvpjputexzrhvzfhobfeexzszsjiksghiuejwxqiijigjxfeptrzkltovpffwgbbdhuqconfdmzfcokalskymxkadszppvychaetsubdxtafzrcwemwreuwzvwluyfhnais",
-//     "password": "in"
-// };
-
-// fetch(url, {
-//     method: "POST",
-//     headers,
-//     body: JSON.stringify(body),
-// }).then(response => response.json());
- 
-
-// export const authAPI = {
-//     authMe(){
-//         return axiosInstance.get("auth/me").then((res)=>res.data);
-//     },
-
-//     tryToLogin(login, password, rememberMe){
-//         return axiosInstance.post("auth/login", {
-//             email: login,
-//             password : password,
-//             rememberMe : rememberMe
-//         }).then((res)=>{
-//             return res.data;
-//         })
-//     }
-// }
-
-
 
 export const API_1 = {
 
@@ -66,6 +37,14 @@ export const API_1 = {
         return axiosInstance.post('check-email', {
             email: email
         });
+    },
+
+    authorization(email, password){
+
+        return axiosInstance.post('login', {
+            email,
+            password
+        })
     }
 
 }

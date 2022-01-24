@@ -1,7 +1,7 @@
 
 import Entry2 from "./Entry2";
 import { connect } from "react-redux";
-import { changeEmail } from "../../redux/entry1Reduser";
+import { AuthorizationThunkCreator } from "../../redux/entry2Reduser";
 import { exit } from '../../redux/appReduser';
 
 
@@ -13,12 +13,13 @@ const Entry2Container = props => {
 const mapStateToProps = state => {
     
     return  {
-        email : state.entry1Reduser.email   
+        isPending: state.entry2Reduser.isPending,
+        errorMessage : state.entry2Reduser.errorMessage
     }
 }
 
 const mapDispatchToProps = {
-    changeEmail,
+    AuthorizationThunkCreator,
     exit
 }
 

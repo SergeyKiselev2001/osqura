@@ -21,16 +21,26 @@ const Entry1 = props => {
         <div className={classes.form_area}>
             <div className={classes.form_box}>
                 <div className={classes.header}>
+                    <span>Вход или регистрация</span>
                     <button onClick={exit}>EXIT</button>
                 </div>
 
                 <form onSubmit={submit}>
                     <label>Email</label>
+                    <br />
                     <input onChange={changeEmail} value={props.email}/>
-
+                    <br />
                     <button type='submit'>Продолжить</button>
                 </form>
-                <h1>Entry1</h1>
+                <span>Или</span>
+
+                <div className={classes.connectWithSocials}>
+                    heh
+                </div>
+
+                <span className={classes.loader}>
+                { props.isPending ? 'Загрузка...' : ''}
+                </span>
                 
                 
             </div>

@@ -16,7 +16,8 @@ const Entry1Container = props => {
 const mapStateToProps = state => {
     
     return  {
-        email : state.entry1Reduser.email   
+        email : state.entry1Reduser.email,
+        isPending : state.entry1Reduser.isPending
     }
 }
 
