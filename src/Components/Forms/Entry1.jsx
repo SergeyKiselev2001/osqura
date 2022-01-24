@@ -22,13 +22,17 @@ const Entry1 = props => {
             <div className={classes.form_box}>
                 <div className={classes.header}>
                     <span>Вход или регистрация</span>
-                    <button onClick={exit}>EXIT</button>
+                    <div className={classes.close}>
+                        <button onClick={exit}></button>
+                    </div>
                 </div>
 
                 <form onSubmit={submit}>
-                    <label>Email</label>
+                    <label>E-mail</label>
                     <br />
-                    <input onChange={changeEmail} value={props.email}/>
+                    <input placeholder='E-mail' onChange={changeEmail} value={props.email}/>
+                    <br />
+                    <span className={classes.error}>Error message here</span>
                     <br />
                     <button type='submit'>Продолжить</button>
                 </form>
