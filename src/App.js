@@ -8,12 +8,12 @@ import ButtonsContainer from './Components/ButtonsContainer';
 
 function App() {
   return (
-    <>
+    <div class="app">
     <Provider store={store}>
         <ButtonsContainer/>
         <FormsContainer/>
     </Provider>
-    </>
+    </div>
   );
 }
 

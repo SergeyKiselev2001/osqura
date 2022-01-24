@@ -1,4 +1,5 @@
 
+import classes from './../Styles/App/buttons.module.css';
 
 
 const Buttons = props => {
@@ -14,10 +15,10 @@ const Buttons = props => {
     }   
 
     return (
-        <div className="buttons">
-            <button onClick={entry1Click}>Вход 1</button>
-            <button onClick={entry2Click}>Вход 2</button>
-            <button onClick={registrationClick}>Регистрация</button>
+        <div className={classes.buttons}>
+            <button className={classes.button} onClick={entry1Click}>Вход 1</button>
+            <button className={classes.button} onClick={entry2Click}>Вход 2</button>
+            <button className={classes.button} onClick={registrationClick}>Регистрация</button>
         </div>
     )
 }
