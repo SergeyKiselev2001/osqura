@@ -7,7 +7,7 @@
   color: #1dd168;
   height: 100%;
   width: 100%;
-  background-color: rgba(212, 72, 72, 0.315);
+  background-color: rgba(0, 0, 50, 0.25);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,5 +24,11 @@
   width: 480px;
   background-color: white;
   border-radius: 17px;
+}
+
+.form_area .header {
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid #e0e0ee;
 }
 /*# sourceMappingURL=form.module.css.map */

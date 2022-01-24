@@ -16,7 +16,7 @@ const FormsContainer = props => {
 }
 
 const mapStateToProps = state => {
-    debugger;
+
     return  {
         state : state.appReduser  
     }

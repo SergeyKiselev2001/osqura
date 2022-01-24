@@ -1,6 +1,6 @@
 
 
-
+import classes from './../../Styles/Forms/form.module.css';
 
 const Registration = props => {
 
@@ -9,11 +9,18 @@ const Registration = props => {
         //props.changeEmail('xxx');
     }
 
+    const exit = () => {
+        props.exit();
+    }
+
     return (
-        <>
-            <h1>REGISTRATION</h1>
-            <button onClick={changeEmail}>BACK</button>
-        </>
+        <div className={classes.form_area}>
+            <div className={classes.form_box}>
+                <h1>Registration</h1>
+                <button onClick={exit}>EXIT</button>
+                <button onClick={changeEmail}>{props.email}</button>
+            </div>
+        </div>
     )
 }
 

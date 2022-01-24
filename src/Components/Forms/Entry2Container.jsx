@@ -2,16 +2,12 @@
 import Entry2 from "./Entry2";
 import { connect } from "react-redux";
 import { changeEmail } from "../../redux/entry1Reduser";
+import { exit } from '../../redux/appReduser';
 
 
 const Entry2Container = props => {
 
-    return (
-        <>
-        <h1>ent2</h1>
-            <Entry2 {...props}/>
-        </>
-    )
+    return <Entry2 {...props}/>
 }
 
 const mapStateToProps = state => {
@@ -22,7 +18,8 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-    changeEmail
+    changeEmail,
+    exit
 }
 
 

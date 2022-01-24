@@ -1,6 +1,6 @@
 import Entry1 from "./Entry1";
 import { connect } from "react-redux";
-import { changeEmail } from "../../redux/entry1Reduser";
+import { changeEmail, submitThunkCreator } from "../../redux/entry1Reduser";
 import { exit } from '../../redux/appReduser';
 
 
@@ -22,6 +22,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
     changeEmail,
+    submit : submitThunkCreator,
     exit
 }
 

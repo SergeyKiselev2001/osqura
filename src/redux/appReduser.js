@@ -2,7 +2,7 @@
 
 
 let initialState = { 
-    form1IsVisible: true, 
+    form1IsVisible: false, 
     form2IsVisible: false,
     registrationIsVisible: false
 };
