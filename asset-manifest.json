@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/osqura/static/css/main.95cf4e85.css",
+    "main.js": "/osqura/static/js/main.28456a88.js",
+    "static/js/787.d390caa8.chunk.js": "/osqura/static/js/787.d390caa8.chunk.js",
+    "static/media/fb.jpg": "/osqura/static/media/fb.93dd77fc97900a1ed42f.jpg",
+    "static/media/google.jpg": "/osqura/static/media/google.aa4ce61ccc465057905f.jpg",
+    "static/media/vk.png": "/osqura/static/media/vk.767a04614a658b347434.png",
+    "static/media/apple.png": "/osqura/static/media/apple.440b0d23ae61e3b7f708.png",
+    "index.html": "/osqura/index.html",
+    "static/media/close.svg": "/osqura/static/media/close.ff1e69622c485719fda9.svg",
+    "main.95cf4e85.css.map": "/osqura/static/css/main.95cf4e85.css.map",
+    "main.28456a88.js.map": "/osqura/static/js/main.28456a88.js.map",
+    "787.d390caa8.chunk.js.map": "/osqura/static/js/787.d390caa8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.95cf4e85.css",
+    "static/js/main.28456a88.js"
+  ]
+}
