@@ -3,7 +3,6 @@ import Entry2Container from "./Forms/Entry2Container";
 import RegistrationContainer from "./Forms/RegistrationContainer";
 import ResultContainer from "./ResultContainer";
 
-
 const Forms = props => {
 
     const form1 = props.state.form1IsVisible ? <Entry1Container/> : '';
