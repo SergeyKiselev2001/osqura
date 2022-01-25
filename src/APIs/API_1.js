@@ -34,6 +34,7 @@ const axiosInstance = axios.create({
 export const API_1 = {
 
     sendEmailToCheck(email){
+        debugger;
         return axiosInstance.post('check-email', {
             email: email
         });

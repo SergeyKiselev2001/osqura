@@ -14,9 +14,9 @@ const Entry2 = props => {
     const changePassword = e => {
         setPassword(e.target.value);
     }
-
     
     const exit = () => {
+        props.setErrorMessageEntry2('');
         props.exit();
     }
 
@@ -25,26 +25,29 @@ const Entry2 = props => {
         props.AuthorizationThunkCreator(email, password);
     }
 
-
     return (
         <div className={classes.form_area}>
-            <div className={classes.form_box}>
+            <div className={[classes.form_box, classes.authorization_form].join(' ')}>
                 <div className={classes.header}>
                     <span>Вход</span>
-                    <button onClick={exit}>EXIT</button>
+                    <div className={classes.close}>
+                        <button onClick={exit}></button>
+                    </div>
                 </div>
 
                 <form onSubmit={submit}>
-                    <label>Email</label>
+                    <label>E-mail</label>
                     <br />
-                    <input onChange={changeEmail} value={email}/>
+                    <input spellcheck="false" onChange={changeEmail} value={email}/>
                     <br />
-                    <input onChange={changePassword} type='password' value={password}/>
+                    <label>Password</label>
+                    <br />
+                    <input spellcheck="false" onChange={changePassword} type='password' value={password}/>
                     <br />
                     <button type='submit'>Войти</button>
                     <br />
-                    <span>
-                        {props.errorMessage ? props.errorMessage : 'ничего'}
+                    <span className={classes.authorization_error}>
+                        {props.errorMessage ? props.errorMessage : ''}
                     </span>
                 </form>
 

@@ -1,8 +1,6 @@
-
 import classes from './../Styles/App/result.module.css';
 
 const Result = props => {
-
 
     return (
         <div className={classes.result}>
@@ -11,8 +9,6 @@ const Result = props => {
             </h1>
         </div>
     )
-
 }
-
 
 export default Result;

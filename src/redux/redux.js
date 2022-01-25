@@ -6,10 +6,6 @@ import {appReduser} from './appReduser';
 import { registrationReduser } from './registrationReduser';
 import thunkMiddleware from 'redux-thunk';
 
-//import {reducer as formReducer} from 'redux-form';
-//import thunkMiddleware from 'redux-thunk';
-
-
 let redusers = combineReducers({
     entry1Reduser,
     entry2Reduser,
