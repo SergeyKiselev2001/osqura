@@ -40,11 +40,9 @@ export const AuthorizationThunkCreator = (email, password) => async (dispatch) =
         debugger;
         dispatch(toggleForm2());
     } catch (e) {
-        debugger;
         dispatch(setErrorMessageEntry2('Неверный логин/пароль'));
     } finally {
         dispatch(tooglePendingEntry2());
-        //dispatch(toggleResult());
     }
 }
 

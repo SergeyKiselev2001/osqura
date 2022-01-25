@@ -1,6 +1,4 @@
-
-
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import classes from './../../Styles/Forms/form.module.css';
 
 const Registration = props => {
@@ -9,17 +7,6 @@ const Registration = props => {
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
-
-    // useEffect(() => {
-    //     const unsubscribe = () => {
-    //         setEmail('');
-    //         setPassword('');
-    //         setName('');
-    //         setPhone('');
-    //     }
-    //     return () => unsubscribe()
-    //   }, [])
-
 
     const changeEmail = e => { 
         setEmail(e.target.value);
@@ -47,8 +34,6 @@ const Registration = props => {
         e.preventDefault();
         props.addUserThunkCreator(name, phone, email, password);
     }
-
-  
 
     return (
         <div className={classes.form_area}>

@@ -14,7 +14,6 @@ const Entry2 = props => {
     const changePassword = e => {
         setPassword(e.target.value);
     }
-
     
     const exit = () => {
         props.setErrorMessageEntry2('');
@@ -25,8 +24,6 @@ const Entry2 = props => {
         e.preventDefault();
         props.AuthorizationThunkCreator(email, password);
     }
-
-
 
     return (
         <div className={classes.form_area}>

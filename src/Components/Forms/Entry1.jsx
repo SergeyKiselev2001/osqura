@@ -15,10 +15,7 @@ const Entry1 = props => {
         setEmail(e.target.value);
     }
 
- 
-
     const leaveFocus = () => {
-
 
         if (wasFocused && !(email).trim()) {
             setError(true);
@@ -39,7 +36,6 @@ const Entry1 = props => {
         } else {
             setError(true);
         }
-        
     }
 
     return (
@@ -76,8 +72,6 @@ const Entry1 = props => {
                 <span className={classes.loader}>
                 { props.isPending ? 'Загрузка...' : ''}
                 </span>
-                
-                
             </div>
         </div>
     )

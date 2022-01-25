@@ -1,6 +1,4 @@
-import Entry1 from "./Entry1";
 import { connect } from "react-redux";
-import { changeEmail } from "../../redux/entry1Reduser";
 import Registration from "./Registration";
 import { exit } from '../../redux/appReduser';
 

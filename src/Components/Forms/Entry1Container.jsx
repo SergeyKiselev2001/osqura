@@ -5,16 +5,10 @@ import { exit } from '../../redux/appReduser';
 
 
 const Entry1Container = props => {
-
-    return (
-        <>
-            <Entry1 {...props}/>
-        </>
-    )
+    return <Entry1 {...props}/>
 }
 
 const mapStateToProps = state => {
-    
     return  {
         isPending : state.entry1Reduser.isPending
     }
