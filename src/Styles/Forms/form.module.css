@@ -31,7 +31,9 @@
 }
 
 .form_area .form_box form {
-  height: 200px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-left: 22px;
@@ -46,6 +48,7 @@
 }
 
 .form_area .form_box .loader {
+  margin-top: 50px;
   color: black;
   text-align: center;
   display: block;
@@ -60,6 +63,12 @@
   outline: none;
   border: none;
   background-color: #e8ecf5;
+}
+
+.form_area .form_box input:focus {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 20px 5px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 0px 20px 5px rgba(34, 60, 80, 0.2);
 }
 
 .form_area .header {
@@ -85,11 +94,25 @@
 }
 
 .form_area .close button {
-  border: 1px solid black;
-  background-color: white;
+  cursor: pointer;
+  background: url("./../../assets/svg/close.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 22px 22px;
   height: 36px;
   width: 36px;
   border-radius: 50%;
+  border: none;
+}
+
+.form_area .close button:hover {
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.form_area .close button:active {
+  -webkit-box-shadow: inset 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
+          box-shadow: inset 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
 }
 
 .form_area button[type="submit"] {
@@ -104,11 +127,109 @@
   background: linear-gradient(159deg, #5f5ee1 0%, #8953d5 100%);
 }
 
+.form_area button[type="submit"]:hover {
+  background: linear-gradient(159deg, #34c06e 0%, #44f7d9 100%);
+}
+
+.form_area button[type="submit"]:active {
+  background: linear-gradient(159deg, #1e693d 0%, #31b6a0 100%);
+}
+
+.form_area .or {
+  color: dimgray;
+  text-align: center;
+  display: block;
+  margin-left: 50%;
+  margin-top: 20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .form_area .connectWithSocials {
   height: 100px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid red;
   margin-bottom: 20px;
+  width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form_area .connectWithSocials img {
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #c9c9c9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 30px;
+  width: 30px;
+}
+
+.form_area .connectWithSocials img:hover {
+  -webkit-box-shadow: 0px 0px 20px 5px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 0px 20px 5px rgba(34, 60, 80, 0.2);
+}
+
+.form_area .connectWithSocials img:active {
+  -webkit-box-shadow: inset 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
+          box-shadow: inset 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.registration_form {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 550px !important;
+}
+
+.registration_form .loader {
+  margin-top: 50px !important;
+}
+
+.registration_form .agree {
+  display: block;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 14px;
+  width: 420px;
+  line-height: 20px;
+}
+
+.registration_form .agree a {
+  text-decoration: none;
+}
+
+.registration_form .agree a:hover {
+  text-decoration: underline;
+}
+
+.registration_form .registration_error {
+  margin-top: 5px;
+  display: block;
+  height: 20px;
+  color: #c26975;
+  font-size: 14px;
+}
+
+.authorization_form .authorization_error {
+  margin-top: 5px;
+  display: block;
+  height: 20px;
+  color: #c26975;
+  font-size: 14px;
+}
+
+.authorization_form .loader {
+  margin-top: 110px !important;
 }
 /*# sourceMappingURL=form.module.css.map */

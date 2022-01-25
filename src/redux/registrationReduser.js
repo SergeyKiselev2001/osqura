@@ -11,12 +11,14 @@ let initialState = {
 const TOGGLE_PENDING = 'reg/pending';
 const SET_ERROR_MESSAGE = 'reg/setErrorMessage';
 
+
 export const registrationReduser = (state = initialState, action) => {
     switch (action.type) {
         case TOGGLE_PENDING:
             return {...state, isPending : !state.isPending}
         case SET_ERROR_MESSAGE:
             return {...state, errorMessage : action.errorMessage};
+
   
       default:
         return state
@@ -41,7 +43,7 @@ export const addUserThunkCreator = (name, phone, email, password) => async (disp
         }
 
         dispatch(toggleForm3());
-        dispatch(setResultMessage(`Аккаунт был успешно создан! login:${email} password:${password}`));
+        dispatch(setResultMessage(`Аккаунт был успешно создан! login: ${email} password: ${password}`));
 
     } catch (e) {
         dispatch(setErrorMessageRegistration('Введите корректные данные...'));

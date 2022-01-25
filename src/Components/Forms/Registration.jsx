@@ -1,6 +1,6 @@
 
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import classes from './../../Styles/Forms/form.module.css';
 
 const Registration = props => {
@@ -9,6 +9,16 @@ const Registration = props => {
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
+
+    // useEffect(() => {
+    //     const unsubscribe = () => {
+    //         setEmail('');
+    //         setPassword('');
+    //         setName('');
+    //         setPhone('');
+    //     }
+    //     return () => unsubscribe()
+    //   }, [])
 
 
     const changeEmail = e => { 
@@ -29,6 +39,7 @@ const Registration = props => {
 
     
     const exit = () => {
+        props.setErrorMessageRegistration('');
         props.exit();
     }
 
@@ -41,35 +52,41 @@ const Registration = props => {
 
     return (
         <div className={classes.form_area}>
-            <div className={classes.form_box}>
+            <div className={[classes.form_box, classes.registration_form].join(' ')}>
                 <div className={classes.header}>
                     <span>Регистрация</span>
-                    <button onClick={exit}>EXIT</button>
+                    <div className={classes.close}>
+                        <button onClick={exit}></button>
+                    </div>
                 </div>
 
                 <form onSubmit={addUser}>
                     <label>Email</label>
                     <br />
-                    <input onChange={changeEmail} value={email}/>
+                    <input spellcheck="false" onChange={changeEmail} value={email}/>
                     <br />
                     <label>Пароль</label>
                     <br />
-                    <input onChange={changePassword} type='password' value={password}/>
+                    <input spellcheck="false" onChange={changePassword} type='password' value={password}/>
                     <br />
                     <label>Имя Фамилия</label>
                     <br />
-                    <input onChange={changeName} value={name}/>
+                    <input spellcheck="false" onChange={changeName} value={name}/>
                     <br />
                     <label>Телефон</label>
                     <br />
-                    <input onChange={changePhone} type='tel' value={phone}/>
+                    <input spellcheck="false" onChange={changePhone} type='tel' value={phone}/>
                     <br />
                     <button type='submit'>Создать аккаунт</button>
                     <br />
-                    <span>
-                        {props.errorMessage ? props.errorMessage : 'ничего'}
+                    <span className={classes.registration_error}>
+                        {props.errorMessage ? props.errorMessage : ''}
                     </span>
                 </form>
+
+                <span className={classes.agree}>
+                    Нажимая на &laquo;Создать аккаунт&raquo;, вы соглашаетесь с <a href="">Политикой обработки данных.</a>
+                </span>
 
                 <span className={classes.loader}>
                 { props.isPending ? 'Загрузка...' : ''}

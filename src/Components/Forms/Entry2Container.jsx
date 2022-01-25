@@ -1,7 +1,7 @@
 
 import Entry2 from "./Entry2";
 import { connect } from "react-redux";
-import { AuthorizationThunkCreator } from "../../redux/entry2Reduser";
+import { AuthorizationThunkCreator, setErrorMessageEntry2 } from "../../redux/entry2Reduser";
 import { exit } from '../../redux/appReduser';
 
 
@@ -20,6 +20,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
     AuthorizationThunkCreator,
+    setErrorMessageEntry2,
     exit
 }
 

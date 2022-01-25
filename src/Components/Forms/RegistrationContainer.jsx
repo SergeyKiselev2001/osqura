@@ -4,7 +4,7 @@ import { changeEmail } from "../../redux/entry1Reduser";
 import Registration from "./Registration";
 import { exit } from '../../redux/appReduser';
 
-import { addUserThunkCreator } from "../../redux/registrationReduser";
+import { addUserThunkCreator, setErrorMessageRegistration } from "../../redux/registrationReduser";
 
 
 const RigistrationContainer = props => {
@@ -21,6 +21,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
     addUserThunkCreator,
+    setErrorMessageRegistration,
     exit
 }
 
